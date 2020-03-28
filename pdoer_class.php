@@ -116,7 +116,7 @@
          $binds = array_merge($binds,$binds2);
 
          $sql = "update ".$table." set ".
-         implode(",",$columns)." $addtlStmt";
+         implode(",",$columns)." ".$addtlStmt;
 
          $update = self::pdo_connection()->prepare($sql);
          $update->execute($binds);
